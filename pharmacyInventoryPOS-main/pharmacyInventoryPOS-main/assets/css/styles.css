@@ -1,0 +1,132 @@
+/* Remove rounding globally except sidebar + header */
+* {
+    border-radius: 5px;
+}
+
+header,
+.sidebar-fixed {
+    border-radius: 0 !important;
+}
+
+header {
+    background: #f2f2f2;
+}
+
+.header-bar {
+    padding-top: 10px;    /* reduce top space */
+    padding-bottom: 10px; /* reduce bottom space */
+}
+
+.header-bar .container-fluid {
+    align-items: center;  /* keeps items vertically centered */
+}
+
+.dashboard-text {
+    position: absolute;
+    left: 280px; /* width of sidebar + some margin */
+    top: 50%;
+    transform: translateY(-50%);
+    color:#5A5A5A;
+    font-weight:500;
+    font-size:18px;
+}
+
+/* Sidebar flush left, fixed width */
+.sidebar-fixed {
+    width: 260px;
+    min-width: 260px;
+    max-width: 260px;
+    background: #f2f2f2;
+    height: calc(100vh - 96px); /* Adjust 96px if header height differs */
+    position: sticky;
+    top: 96px;
+    left: 0;
+    padding: 10px;
+}
+
+/* Sidebar text color and link style */
+.sidebar-fixed .nav-link {
+    color: #5A5A5A;
+    font-weight: 500;
+    margin-bottom: 5px;
+}
+
+.logo-text {
+    font-weight: 600;
+    color: #5A5A5A;
+    font-size: 14px;
+    margin-left: 2px; /* aligns slightly with logo if needed */
+}
+
+.sidebar-fixed .nav-link:hover {
+    color: #6A9CBA;
+    background: #C7E0F0;
+    border-radius: 5px;
+}
+
+.sidebar-fixed .nav-link img {
+    transition: filter 0.3s ease;
+}
+
+.sidebar-fixed .nav-link:hover img {
+    filter: brightness(0) saturate(100%) invert(56%) sepia(24%) saturate(464%) hue-rotate(168deg) brightness(94%) contrast(93%);
+}
+
+/* Remove all unwanted Bootstrap padding/margins from layout */
+.layout-container {
+    width: 100%;
+    min-height: calc(100vh - 96px);
+    margin: 0;
+    padding: 0;
+    display: flex;
+}
+
+/* Main content fills remaining space */
+.main-content {
+    flex-grow: 1;
+    padding: 20px;
+}
+
+/* Remove container backgrounds */
+[class*='container'] {
+    border: none;
+    background: none;
+}
+
+.row [class*='col'] {
+    background: none;
+}
+
+
+
+.dashboard-container {
+    margin-left: 300px; /* same width as your sidebar */
+    margin-top: -950px;
+}
+
+.dashboard-container .col-md-4 {
+    display: flex;
+    justify-content: center;
+}
+.stat-box:hover {
+    transform: scale(1.05);
+    transition: 0.25s;
+}
+
+.stat-box {
+    width: 2000px;     /* increase width */
+    height: 150px;    /* optional, increase height */
+    margin: auto;     /* center horizontally */
+}
+
+
+.table {
+    width: 2010px !important;
+    font-size: 25px
+}
+
+.dashboard-center {
+    max-width: 2100px;   /* controls width of the white background */
+    margin: 15px;      /* centers it */
+    padding: 1 30px;     /* so content doesn't touch screen edges */
+}
