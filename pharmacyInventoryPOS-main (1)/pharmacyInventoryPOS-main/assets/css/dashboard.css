@@ -1,0 +1,175 @@
+@import url('https://fonts.googleapis.com/css2?family=Jost:ital,wght@0,100..900;1,100..900&display=swap');
+@import url('https://fonts.googleapis.com/css2?family=Plus+Jakarta+Sans:ital,wght@0,200..800;1,200..800&display=swap');
+
+/* Stat Cards */
+.stat-card {
+    background: white;
+    border: 1px solid #e0e0e0;
+    border-radius: 8px;
+    padding: 20px;
+    height: 100%;
+    transition: box-shadow 0.3s ease;
+    font-family: 'Plus Jakarta Sans', sans-serif; /* Reports text font */
+}
+
+.stat-card:hover {
+    box-shadow: 0 4px 12px rgba(0,0,0,0.1);
+}
+
+.stat-icon {
+    background: none !important;
+    border: none !important;
+    box-shadow: none !important;
+    padding: 0 !important;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+}
+
+.stat-icon img {
+    width: 60px;
+    height: 60px;
+    display: block;
+}
+
+.stat-icon.blue { background: #6A9CBA; }
+.stat-icon.teal { background: #5DADE2; }
+.stat-icon.green { background: #58D68D; }
+
+.stat-value {
+    font-size: 32px;
+    font-weight: 700;
+    color: #2C3E50;
+    margin-bottom: 5px;
+}
+
+.stat-label {
+    font-size: 14px;
+    color: #7F8C8D;
+    font-weight: 500;
+}
+
+/* Sales Table Container */
+/* Make the sales table container grow to take up available space */
+.sales-table-container {
+    background: white;
+    border: 1px solid #e0e0e0;
+    border-radius: 8px;
+    padding: 25px;
+    margin-top: 30px;
+    font-family: 'Plus Jakarta Sans', sans-serif;
+    flex-grow: 1; /* Allow it to grow and fill remaining space */
+    overflow: hidden; /* Make sure nothing overflows */
+    display: flex;
+    flex-direction: column;
+}
+
+/* Table Header & Title */
+.table-header {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    margin-bottom: 20px;
+}
+
+.table-header h4 {
+    font-size: 20px;
+    font-weight: 600;
+    color: #2C3E50;
+    margin: 0;
+    font-family: 'Plus Jakarta Sans', sans-serif;
+}
+
+/* Search Box */
+.search-box {
+    position: relative;
+    width: 300px;
+}
+
+.search-box input {
+    width: 100%;
+    padding: 8px 35px 8px 35px; /* left padding increased for icon */
+    border: 1px solid #ddd;
+    border-radius: 5px;
+    font-size: 14px;
+    font-family: 'Jost', sans-serif;
+    background-image: url('../images/search_icon.png'); /* Assuming folder structure assets/css -> images in ../images/ */
+    background-repeat: no-repeat;
+    background-position: 10px center;
+    background-size: 16px 16px;
+}
+
+.search-box input:focus {
+    outline: none;
+    border-color: #6A9CBA;
+}
+
+.search-icon {
+    display: none; /* Hide the old span icon since using actual image */
+}
+
+/* Sort Button */
+.sort-btn {
+    background: #6A9CBA;
+    color: white;
+    border: none;
+    padding: 8px 20px;
+    border-radius: 5px;
+    font-size: 14px;
+    cursor: pointer;
+    margin-left: 10px;
+    display: flex;
+    align-items: center;
+    gap: 5px;
+    font-family: 'Jost', sans-serif;
+    background-image: url('../images/sort_icon.png');
+    background-repeat: no-repeat;
+    background-position: 8px center;
+    background-size: 16px 16px;
+    padding-left: 30px; /* to make space for icon */
+}
+
+.sort-btn span {
+    /* Only the text part */
+    color: white;
+}
+
+/* Sales Table */
+.sales-table {
+    width: 100%;
+    border: 1px solid #ddd;
+    font-family: 'Jost', sans-serif;
+}
+
+.sales-table thead th {
+    background: #F8F9FA;
+    color: #495057;
+    font-weight: 600;
+    font-size: 14px;
+    padding: 12px;
+    text-align: left;
+    border-bottom: 2px solid #e0e0e0;
+    font-family: 'Plus Jakarta Sans', sans-serif; /* header font stays Plus Jakarta Sans */
+}
+
+.sales-table tbody td {
+    padding: 12px;
+    font-size: 14px;
+    color: #495057;
+    border-bottom: 1px solid #f0f0f0;
+    font-family: 'Jost', sans-serif; /* body text font */
+}
+
+.sales-table tbody tr:hover {
+    background: #F8F9FA;
+}
+
+.main-content {
+    background: #F2F2F2;
+    display: flex;
+    flex-direction: column;
+    height: 100%; /* Take up full height */
+    padding-top: 20px; /* Optional: to add a small padding at the top */
+}
+
+
