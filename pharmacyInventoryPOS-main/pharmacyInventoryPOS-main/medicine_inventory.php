@@ -3,33 +3,34 @@
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Medicine Inventory</title>
-
-    <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.8/dist/css/bootstrap.min.css" rel="stylesheet">
-    <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.8/dist/js/bootstrap.bundle.min.js"></script>
-    <link rel="stylesheet" href="assets/css/styles.css">
+    <meta http-equiv="X-UA-Compatible" content="ie=edge">
+    <title>Medicine Inventory - PharmAC</title>
+    <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.8/dist/css/bootstrap.min.css" rel="stylesheet" integrity="sha384-sRIl4kxILFvY47J16cr9ZwB07vP4J8+LH7qKQnuqkuIAvNWLzeN8tE5YBujZqJLB" crossorigin="anonymous">
+    <link rel="stylesheet" href="assets/css/sidebar.css">
+    <link rel="stylesheet" href="assets/css/medicine_inventory.css">
 </head>
 <body>
+    
+    <?php include "includes/sidebar.php"; ?>
 
-    <?php include "includes/sidebar.php"; ?>  <!-- Sidebar stays here -->
-
-
-
-        <div class="dashboard-center">
-
-            <div class="bg-white shadow rounded p-4 mb-5 w-100">
-                <div class="d-flex justify-content-between align-items-center mb-3">
-                    <h4 class="m-0">Medicine Inventory</h4>
-
-                    <div>
-                        <input type="text" id="searchInput" class="form-control d-inline-block"
-                        placeholder="Search Product" style="width: 220px;" oninput="filterTable()">
-                        <button class="btn btn-primary ms-2" onclick="sortByAvailable()">Sort</button>
+    <main class="main-content overflow-auto">
+        <!-- Medicine Inventory Table -->
+        <div class="sales-table-container">
+            <div class="table-header">
+                <h4>Medicine Inventory</h4>
+                <div class="d-flex align-items-center">
+                    <div class="search-box">
+                        <input type="text" id="searchProduct" placeholder="Search Product">
                     </div>
+                    <button class="sort-btn">
+                        <span>Sort</span>
+                    </button>
                 </div>
-
-                <table class="table table-bordered align-middle text-center" id="inventoryTable">
-                    <thead class="table-light">
+            </div>
+            
+            <div class="table-responsive">
+                <table class="sales-table">
+                    <thead>
                         <tr>
                             <th>#</th>
                             <th>Product Name</th>
@@ -39,50 +40,141 @@
                             <th>Stock Available</th>
                         </tr>
                     </thead>
-
                     <tbody>
-                        <tr><td>1</td><td>Paracetamol (Tylenol) 500mg</td><td>100</td><td>20</td><td>0</td><td>80</td></tr>
+                        <tr>
+                            <td>1</td>
+                            <td>Paracetamol (Tylenol) 500mg</td>
+                            <td>100</td>
+                            <td>20</td>
+                            <td>0</td>
+                            <td>80</td>
+                        </tr>
+                        <tr>
+                            <td>1</td>
+                            <td>Paracetamol (Tylenol) 500mg</td>
+                            <td>100</td>
+                            <td>20</td>
+                            <td>0</td>
+                            <td>80</td>
+                        </tr>
+                        <tr>
+                            <td>1</td>
+                            <td>Paracetamol (Tylenol) 500mg</td>
+                            <td>100</td>
+                            <td>20</td>
+                            <td>0</td>
+                            <td>80</td>
+                        </tr>
+                        <tr>
+                            <td>1</td>
+                            <td>Paracetamol (Tylenol) 500mg</td>
+                            <td>100</td>
+                            <td>20</td>
+                            <td>0</td>
+                            <td>80</td>
+                        </tr>
+                        <tr>
+                            <td>2</td>
+                            <td>Amoxicillin 250mg</td>
+                            <td>10</td>
+                            <td>5</td>
+                            <td>0</td>
+                            <td>5</td>
+                        </tr>
+                        <tr>
+                            <td>3</td>
+                            <td>Ibuprofen 200mg</td>
+                            <td>200</td>
+                            <td>70</td>
+                            <td>20</td>
+                            <td>130</td>
+                        </tr>
+                        <tr>
+                            <td>4</td>
+                            <td>Cetirizine 5mg</td>
+                            <td>350</td>
+                            <td>60</td>
+                            <td>0</td>
+                            <td>490</td>
+                        </tr>
+                        <tr>
+                            <td>5</td>
+                            <td>Ciprofloxacin 500mg</td>
+                            <td>120</td>
+                            <td>0</td>
+                            <td>0</td>
+                            <td>120</td>
+                        </tr>
+                        <tr>
+                            <td>6</td>
+                            <td>Salbutamol (Ventolin) 100mcg</td>
+                            <td>120</td>
+                            <td>0</td>
+                            <td>0</td>
+                            <td>120</td>
+                        </tr>
+                        <tr>
+                            <td>7</td>
+                            <td>Prednisolone 15mg</td>
+                            <td>300</td>
+                            <td>0</td>
+                            <td>0</td>
+                            <td>300</td>
+                        </tr>
+                        <tr>
+                            <td>8</td>
+                            <td>Ofloxacin 0.3% 5m</td>
+                            <td>250</td>
+                            <td>0</td>
+                            <td>0</td>
+                            <td>250</td>
+                        </tr>
+                        <tr>
+                            <td>9</td>
+                            <td>Omeprazole 20mg</td>
+                            <td>500</td>
+                            <td>0</td>
+                            <td>0</td>
+                            <td>500</td>
+                        </tr>
+                        <tr>
+                            <td>10</td>
+                            <td>Metformin 500mg</td>
+                            <td>300</td>
+                            <td>0</td>
+                            <td>0</td>
+                            <td>300</td>
+                        </tr>
+                        <tr>
+                            <td>11</td>
+                            <td>Loperamide 2mg</td>
+                            <td>500</td>
+                            <td>0</td>
+                            <td>0</td>
+                            <td>500</td>
+                        </tr>
                     </tbody>
                 </table>
             </div>
-
         </div>
+    </main>
 
-
+    <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.8/dist/js/bootstrap.bundle.min.js" integrity="sha384-FKyoEForCGlyvwx9Hj09JcYn3nv7wiPVlz7YYwJrWVcXK/BmnVDxM+D2scQbITxI" crossorigin="anonymous"></script>
     <script>
-        // Search
-        function filterTable() {
-            let q = document.getElementById("searchInput").value.toLowerCase();
-            let rows = document.querySelectorAll("#inventoryTable tbody tr");
-
-            rows.forEach(row => {
-                let name = row.cells[1].textContent.toLowerCase();
-                row.style.display = name.includes(q) ? "" : "none";
+        // Simple search functionality
+        document.getElementById('searchProduct').addEventListener('keyup', function() {
+            const searchValue = this.value.toLowerCase();
+            const tableRows = document.querySelectorAll('.sales-table tbody tr');
+            
+            tableRows.forEach(row => {
+                const productName = row.cells[1].textContent.toLowerCase();
+                if (productName.includes(searchValue)) {
+                    row.style.display = '';
+                } else {
+                    row.style.display = 'none';
+                }
             });
-        }
-
-        // Sort by stock available
-        let sortDesc = false;
-
-        function sortByAvailable() {
-            const tbody = document.querySelector("#inventoryTable tbody");
-            const rows = Array.from(tbody.querySelectorAll("tr"));
-
-            rows.sort((a, b) => {
-                let aVal = parseInt(a.cells[5].textContent);
-                let bVal = parseInt(b.cells[5].textContent);
-                return sortDesc ? aVal - bVal : bVal - aVal;
-            });
-
-            rows.forEach(r => tbody.appendChild(r));
-            sortDesc = !sortDesc;
-
-            // Update numbering
-            Array.from(tbody.querySelectorAll("tr")).forEach((r, i) => {
-                r.cells[0].textContent = i + 1;
-            });
-        }
+        });
     </script>
-
 </body>
-</html>
+</html

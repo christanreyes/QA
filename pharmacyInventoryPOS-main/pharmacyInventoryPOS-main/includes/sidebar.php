@@ -4,7 +4,7 @@
             <a href="#" class="d-flex align-items-center mb-1">
                 <img src="assets/images/main_logo.png" width="110" height="40">
             </a>
-            <span style="color:#5A5A5A; font-weight:500;">Inventory and POS</span>
+            <span class="sidebar-title" >Inventory and POS</span>
         </div>
 
         <div class="d-flex align-items-center">
@@ -20,44 +20,41 @@
         <span class="dashboard-text">Dashboard</span>
     </div>
 </header>
-
-
-
 <div class="layout-container d-flex">
     <aside class="sidebar-fixed">
         <ul class="nav flex-column mb-auto">
             <li class="nav-item">
-                <a href="#" class="nav-link d-flex align-items-center">
+                <a href="dashboard.php" class="nav-link d-flex align-items-center <?php echo basename($_SERVER['PHP_SELF']) == 'dashboard.php' ? 'active' : ''; ?>">
                     <img src="assets/images/dashboard_icon.png" width="24" height="24" class="me-2">
                     Dashboard
                 </a>
             </li>
             <li class="nav-item">
-                <a href="#" class="nav-link d-flex align-items-center">
+                <a href="medicine_inventory.php" class="nav-link d-flex align-items-center <?php echo basename($_SERVER['PHP_SELF']) == 'medicine_inventory.php' ? 'active' : ''; ?>">
                     <img src="assets/images/inventory_icon.png" width="24" height="24" class="me-2">
                     Medicine Inventory
                 </a>
             </li>
             <li class="nav-item">
-                <a href="#" class="nav-link d-flex align-items-center">
+                <a href="sales.php" class="nav-link d-flex align-items-center <?php echo basename($_SERVER['PHP_SELF']) == 'sales.php' ? 'active' : ''; ?>">
                     <img src="assets/images/sales_icon.png" width="24" height="24" class="me-2">
                     Sales
                 </a>
             </li>
             <li class="nav-item">
-                <a href="#" class="nav-link d-flex align-items-center">
+                <a href="stockin.php" class="nav-link d-flex align-items-center <?php echo basename($_SERVER['PHP_SELF']) == 'stockin.php' ? 'active' : ''; ?>">
                     <img src="assets/images/stockin_icon.png" width="24" height="24" class="me-2">
                     Stock In
                 </a>
             </li>
             <li class="nav-item">
-                <a href="#" class="nav-link d-flex align-items-center">
+                <a href="category-type.php" class="nav-link d-flex align-items-center">
                     <img src="assets/images/category_type_icon.png" width="24" height="24" class="me-2">
                     Category and Type
                 </a>
             </li>
             <li class="nav-item">
-                <a href="#" class="nav-link d-flex align-items-center">
+                <a href="med-list.php" class="nav-link d-flex align-items-center">
                     <img src="assets/images/list_icon.png" width="24" height="24" class="me-2">
                     Medicine List
                 </a>
@@ -83,10 +80,3 @@
         </ul>
     </aside>
 
-    <main class="main-content overflow-auto">
-        <div class="bg-light border rounded-3 p-3">
-            <h2>Main</h2>
-            <p>Your main content here...</p>
-        </div>
-    </main>
-</div>

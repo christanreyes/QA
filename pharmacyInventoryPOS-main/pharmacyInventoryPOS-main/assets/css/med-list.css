@@ -1,0 +1,96 @@
+@import url('https://fonts.googleapis.com/css2?family=Jost:ital,wght@0,100..900;1,100..900&display=swap');
+@import url('https://fonts.googleapis.com/css2?family=Plus+Jakarta+Sans:ital,wght@0,200..800;1,200..800&display=swap');
+
+
+
+body {
+    font-family: Arial, sans-serif;
+    background-color: #f4f5f7;
+    margin: 0;
+    padding: 0;
+}
+
+.main-content {
+    padding: 20px;
+}
+
+.module-container {
+    background-color: #fff;
+    padding: 20px;
+    border-radius: 8px;
+    box-shadow: 0 2px 10px rgba(0,0,0,0.1);
+}
+
+.module-header h4 {
+    margin: 0;
+}
+
+.header-controls .form-control {
+    width: 200px;
+}
+
+.table-scroll {
+    max-height: 400px;
+    overflow-y: auto;
+    margin-top: 20px;
+}
+
+.medicine-table {
+    width: 100%;
+    border-collapse: collapse;
+}
+
+.medicine-table thead {
+    position: sticky;
+    top: 0;
+    background-color: #e9ecef;
+    z-index: 2;
+}
+
+.medicine-table th, .medicine-table td {
+    padding: 12px;
+    text-align: center;
+    border-bottom: 1px solid #ccc;
+}
+
+.medicine-table tbody tr:nth-child(even) {
+    background-color: #f9f9f9;
+}
+
+.action-btn {
+    border: none;
+    background: none;
+    cursor: pointer;
+    margin: 0 2px;
+}
+
+.modal-overlay {
+    display: none;
+    position: fixed;
+    inset: 0;
+    background: rgba(0,0,0,0.5);
+    justify-content: center;
+    align-items: center;
+    z-index: 1000;
+}
+
+.modal-content {
+    background: #fff;
+    padding: 20px;
+    border-radius: 8px;
+    width: 400px;
+}
+
+.modal-header h5 {
+    margin: 0;
+}
+
+.modal-footer {
+    display: flex;
+    justify-content: flex-end;
+    margin-top: 15px;
+}
+
+.modal-footer .btn {
+    margin-left: 10px;
+}
