@@ -1,0 +1,331 @@
+@import url('https://fonts.googleapis.com/css2?family=Jost:ital,wght@0,100..900;1,100..900&display=swap');
+@import url('https://fonts.googleapis.com/css2?family=Plus+Jakarta+Sans:ital,wght@0,200..800;1,200..800&display=swap');
+
+/* Main Content Background */
+.main-content {
+    background: #F2F2F2;
+}
+
+/* Medicine List Table Container - with fixed height using calc */
+.sales-table-container {
+    background: white;
+    border: 1px solid #e0e0e0;
+    border-radius: 8px;
+    padding: 25px;
+    font-family: 'Plus Jakarta Sans', sans-serif;
+    margin-top: 0;
+    display: flex;
+    flex-direction: column;
+    height: calc(100vh - 120px);
+}
+
+/* Table responsive - this scrolls */
+.table-responsive {
+    overflow-y: auto;
+    flex-grow: 1;
+}
+
+/* Table Header & Title */
+.table-header {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    margin-bottom: 20px;
+}
+
+.table-header h4 {
+    font-size: 20px;
+    font-weight: 600;
+    color: #2C3E50;
+    margin: 0;
+    font-family: 'Plus Jakarta Sans', sans-serif;
+}
+
+/* New Medicine Button */
+.new-medicine-btn {
+    background: #6A9CBA;
+    color: white;
+    border: none;
+    padding: 8px 20px;
+    border-radius: 5px;
+    font-size: 14px;
+    cursor: pointer;
+    margin-right: 10px;
+    display: flex;
+    align-items: center;
+    gap: 5px;
+    font-family: 'Jost', sans-serif;
+    font-weight: 500;
+}
+
+.new-medicine-btn:hover {
+    background: #5a8aa8;
+}
+
+/* Search Box */
+.search-box {
+    position: relative;
+    width: 300px;
+}
+
+.search-box input {
+    width: 100%;
+    padding: 8px 35px 8px 35px;
+    border: 1px solid #ddd;
+    border-radius: 5px;
+    font-size: 14px;
+    font-family: 'Jost', sans-serif;
+    background-image: url('../images/search_icon.png');
+    background-repeat: no-repeat;
+    background-position: 10px center;
+    background-size: 16px 16px;
+}
+
+.search-box input:focus {
+    outline: none;
+    border-color: #6A9CBA;
+}
+
+/* Sort Button */
+.sort-btn {
+    background: #6A9CBA;
+    color: white;
+    border: none;
+    padding: 8px 20px;
+    border-radius: 5px;
+    font-size: 14px;
+    cursor: pointer;
+    margin-left: 10px;
+    display: flex;
+    align-items: center;
+    gap: 5px;
+    font-family: 'Jost', sans-serif;
+    background-image: url('../images/sort_icon.png');
+    background-repeat: no-repeat;
+    background-position: 8px center;
+    background-size: 16px 16px;
+    padding-left: 30px;
+}
+
+.sort-btn:hover {
+    background: #5a8aa8;
+}
+
+.sort-btn span {
+    color: white;
+}
+
+/* Sales Table */
+.sales-table {
+    width: 100%;
+    border: 1px solid #ddd;
+    font-family: 'Jost', sans-serif;
+    border-collapse: collapse;
+}
+
+.sales-table thead th {
+    background: #F8F9FA;
+    color: #495057;
+    font-weight: 600;
+    font-size: 14px;
+    padding: 12px;
+    text-align: left;
+    border-bottom: 2px solid #e0e0e0;
+    font-family: 'Plus Jakarta Sans', sans-serif;
+    position: sticky;
+    top: 0;
+    background: #F8F9FA;
+    z-index: 10;
+}
+
+.sales-table tbody td {
+    padding: 12px;
+    font-size: 14px;
+    color: #495057;
+    border-bottom: 1px solid #f0f0f0;
+    font-family: 'Jost', sans-serif;
+}
+
+.sales-table tbody tr:hover {
+    background: #F8F9FA;
+}
+
+/* Product Information */
+.product-sku {
+    font-size: 13px;
+    color: #7F8C8D;
+    margin-bottom: 2px;
+}
+
+.product-name {
+    font-size: 14px;
+    font-weight: 600;
+    color: #2C3E50;
+}
+
+/* Action Buttons */
+.action-btn {
+    background: none;
+    border: none;
+    padding: 4px 8px;
+    cursor: pointer;
+    margin: 0 2px;
+    transition: transform 0.2s ease;
+}
+
+.action-btn:hover {
+    transform: scale(1.1);
+}
+
+.action-btn img {
+    width: 20px;
+    height: 20px;
+    display: block;
+}
+
+.edit-btn img {
+    filter: brightness(0) saturate(100%) invert(56%) sepia(24%) saturate(464%) hue-rotate(168deg) brightness(94%) contrast(93%);
+}
+
+.delete-btn img {
+    filter: brightness(0) saturate(100%) invert(45%) sepia(95%) saturate(4823%) hue-rotate(338deg) brightness(96%) contrast(93%);
+}
+
+/* Modal Overlay */
+.modal-overlay {
+    display: none;
+    position: fixed;
+    top: 0;
+    left: 0;
+    right: 0;
+    bottom: 0;
+    background: rgba(0, 0, 0, 0.5);
+    justify-content: center;
+    align-items: center;
+    z-index: 1000;
+}
+
+.modal-content {
+    background: white;
+    border-radius: 8px;
+    box-shadow: 0 4px 20px rgba(0, 0, 0, 0.2);
+    max-width: 90%;
+    max-height: 90%;
+    overflow: auto;
+}
+
+/* Medicine Modal */
+.medicine-modal {
+    width: 500px;
+}
+
+.modal-header-custom {
+    background: white;
+    padding: 20px 25px;
+    border-bottom: 1px solid #e0e0e0;
+}
+
+.modal-header-custom h5 {
+    margin: 0;
+    font-size: 16px;
+    font-weight: 600;
+    color: #2C3E50;
+    font-family: 'Plus Jakarta Sans', sans-serif;
+}
+
+.modal-body-custom {
+    padding: 25px;
+}
+
+.form-group {
+    margin-bottom: 15px;
+}
+
+.form-group label {
+    display: block;
+    font-size: 14px;
+    font-weight: 500;
+    color: #2C3E50;
+    margin-bottom: 5px;
+    font-family: 'Jost', sans-serif;
+}
+
+.form-select, .form-control {
+    width: 100%;
+    padding: 8px 12px;
+    border: 1px solid #ddd;
+    border-radius: 5px;
+    font-size: 14px;
+    font-family: 'Jost', sans-serif;
+}
+
+.form-select:focus, .form-control:focus {
+    outline: none;
+    border-color: #6A9CBA;
+}
+
+.form-row-two {
+    display: flex;
+    gap: 15px;
+    margin-bottom: 0;
+}
+
+.form-row-two .form-group {
+    flex: 1;
+}
+
+/* Checkbox */
+.checkbox-label {
+    display: flex;
+    align-items: center;
+    font-size: 14px;
+    color: #495057;
+    font-weight: normal;
+    cursor: pointer;
+}
+
+.checkbox-label input[type="checkbox"] {
+    margin-right: 8px;
+    width: 16px;
+    height: 16px;
+    cursor: pointer;
+}
+
+/* Modal Footer */
+.modal-footer-custom {
+    display: flex;
+    gap: 10px;
+    justify-content: flex-start;
+}
+
+.btn-save {
+    background: #4A6FA5;
+    color: white;
+    border: none;
+    padding: 10px 30px;
+    border-radius: 5px;
+    font-size: 14px;
+    cursor: pointer;
+    font-family: 'Jost', sans-serif;
+    font-weight: 500;
+}
+
+.btn-save:hover {
+    background: #3a5a8a;
+}
+
+.btn-cancel {
+    background: #E0E0E0;
+    color: #2C3E50;
+    border: none;
+    padding: 10px 30px;
+    border-radius: 5px;
+    font-size: 14px;
+    cursor: pointer;
+    font-family: 'Jost', sans-serif;
+    font-weight: 500;
+}
+
+.btn-cancel:hover {
+    background: #d0d0d0;
+}

@@ -3,86 +3,161 @@
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Medicine Inventory</title>
-
+    <meta http-equiv="X-UA-Compatible" content="ie=edge">
+    <title>Medicine Inventory - PharmAC</title>
     <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.8/dist/css/bootstrap.min.css" rel="stylesheet">
-    <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.8/dist/js/bootstrap.bundle.min.js"></script>
-    <link rel="stylesheet" href="assets/css/styles.css">
+    <link rel="stylesheet" href="assets/css/sidebar.css">
+    <link rel="stylesheet" href="assets/css/medicine_inventory.css">
 </head>
 <body>
+    
+    <?php include "includes/sidebar.php"; ?>
 
-    <?php include "includes/sidebar.php"; ?>  <!-- Sidebar stays here -->
-
-
-
-        <div class="dashboard-center">
-
-            <div class="bg-white shadow rounded p-4 mb-5 w-100">
-                <div class="d-flex justify-content-between align-items-center mb-3">
-                    <h4 class="m-0">Medicine Inventory</h4>
-
-                    <div>
-                        <input type="text" id="searchInput" class="form-control d-inline-block"
-                        placeholder="Search Product" style="width: 220px;" oninput="filterTable()">
-                        <button class="btn btn-primary ms-2" onclick="sortByAvailable()">Sort</button>
+    <main class="main-content overflow-auto">
+        <!-- Medicine Inventory Table -->
+        <div class="inventory-table-container">
+            <div class="table-header">
+                <h4>Medicine Inventory</h4>
+                <div class="d-flex align-items-center">
+                    <div class="search-box">
+                        <input type="text" id="medicineSearchInput" placeholder="Search Medicine">
                     </div>
+                    <button class="sort-btn">
+                        <span>Sort</span>
+                    </button>
                 </div>
-
-                <table class="table table-bordered align-middle text-center" id="inventoryTable">
-                    <thead class="table-light">
+            </div>
+            
+            <div class="table-responsive">
+                <table class="inventory-table">
+                    <thead>
                         <tr>
                             <th>#</th>
-                            <th>Product Name</th>
+                            <th>Medicine Name</th>
                             <th>Stock In</th>
                             <th>Stock Out</th>
                             <th>Expired</th>
-                            <th>Stock Available</th>
+                            <th>Available Stock</th>
                         </tr>
                     </thead>
-
                     <tbody>
-                        <tr><td>1</td><td>Paracetamol (Tylenol) 500mg</td><td>100</td><td>20</td><td>0</td><td>80</td></tr>
+                        <tr>
+                            <td>1</td>
+                            <td>Paracetamol (Tylenol) 500mg</td>
+                            <td>100</td>
+                            <td>20</td>
+                            <td>0</td>
+                            <td>80</td>
+                        </tr>
+                        <tr>
+                            <td>2</td>
+                            <td>Amoxicillin 250mg</td>
+                            <td>10</td>
+                            <td>5</td>
+                            <td>0</td>
+                            <td>5</td>
+                        </tr>
+                        <tr>
+                            <td>3</td>
+                            <td>Ibuprofen 200mg</td>
+                            <td>200</td>
+                            <td>70</td>
+                            <td>20</td>
+                            <td>130</td>
+                        </tr>
+                        <tr>
+                            <td>1</td>
+                            <td>Paracetamol (Tylenol) 500mg</td>
+                            <td>100</td>
+                            <td>20</td>
+                            <td>0</td>
+                            <td>80</td>
+                        </tr>
+                        <tr>
+                            <td>2</td>
+                            <td>Amoxicillin 250mg</td>
+                            <td>10</td>
+                            <td>5</td>
+                            <td>0</td>
+                            <td>5</td>
+                        </tr>
+                        <tr>
+                            <td>3</td>
+                            <td>Ibuprofen 200mg</td>
+                            <td>200</td>
+                            <td>70</td>
+                            <td>20</td>
+                            <td>130</td>
+                        </tr>
+                        <tr>
+                            <td>1</td>
+                            <td>Paracetamol (Tylenol) 500mg</td>
+                            <td>100</td>
+                            <td>20</td>
+                            <td>0</td>
+                            <td>80</td>
+                        </tr>
+                        <tr>
+                            <td>2</td>
+                            <td>Amoxicillin 250mg</td>
+                            <td>10</td>
+                            <td>5</td>
+                            <td>0</td>
+                            <td>5</td>
+                        </tr>
+                        <tr>
+                            <td>3</td>
+                            <td>Ibuprofen 200mg</td>
+                            <td>200</td>
+                            <td>70</td>
+                            <td>20</td>
+                            <td>130</td>
+                        </tr>
+                        <tr>
+                            <td>1</td>
+                            <td>Paracetamol (Tylenol) 500mg</td>
+                            <td>100</td>
+                            <td>20</td>
+                            <td>0</td>
+                            <td>80</td>
+                        </tr>
+                        <tr>
+                            <td>2</td>
+                            <td>Amoxicillin 250mg</td>
+                            <td>10</td>
+                            <td>5</td>
+                            <td>0</td>
+                            <td>5</td>
+                        </tr>
+                        <tr>
+                            <td>3</td>
+                            <td>Ibuprofen 200mg</td>
+                            <td>200</td>
+                            <td>70</td>
+                            <td>20</td>
+                            <td>130</td>
+                        </tr>
+                        <!-- More rows... -->
                     </tbody>
                 </table>
             </div>
-
         </div>
+    </main>
 
-
+    <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.8/dist/js/bootstrap.bundle.min.js"></script>
     <script>
-        // Search
-        function filterTable() {
-            let q = document.getElementById("searchInput").value.toLowerCase();
-            let rows = document.querySelectorAll("#inventoryTable tbody tr");
+        // Search functionality for Medicine Inventory
+        const medicineSearchInput = document.getElementById('medicineSearchInput');
+        const inventoryTableRows = document.querySelectorAll('.inventory-table tbody tr');
 
-            rows.forEach(row => {
-                let name = row.cells[1].textContent.toLowerCase();
-                row.style.display = name.includes(q) ? "" : "none";
+        medicineSearchInput.addEventListener('keyup', function() {
+            const query = medicineSearchInput.value.toLowerCase();
+            
+            inventoryTableRows.forEach(row => {
+                const medicineName = row.cells[1].textContent.toLowerCase();
+                row.style.display = medicineName.includes(query) ? '' : 'none';
             });
-        }
-
-        // Sort by stock available
-        let sortDesc = false;
-
-        function sortByAvailable() {
-            const tbody = document.querySelector("#inventoryTable tbody");
-            const rows = Array.from(tbody.querySelectorAll("tr"));
-
-            rows.sort((a, b) => {
-                let aVal = parseInt(a.cells[5].textContent);
-                let bVal = parseInt(b.cells[5].textContent);
-                return sortDesc ? aVal - bVal : bVal - aVal;
-            });
-
-            rows.forEach(r => tbody.appendChild(r));
-            sortDesc = !sortDesc;
-
-            // Update numbering
-            Array.from(tbody.querySelectorAll("tr")).forEach((r, i) => {
-                r.cells[0].textContent = i + 1;
-            });
-        }
+        });
     </script>
-
 </body>
 </html>

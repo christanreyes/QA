@@ -1,0 +1,144 @@
+@import url('https://fonts.googleapis.com/css2?family=Jost:wght@300;400;500;600&display=swap');
+@import url('https://fonts.googleapis.com/css2?family=Plus+Jakarta+Sans:wght@400;500;600&display=swap');
+
+
+/* ===== MAIN CONTENT AREA ===== */
+.main-content {
+    margin-left: 260px;
+    padding: 30px;
+    background: #f4f6f9;
+    min-height: 100vh;
+}
+
+/* ===== TABLE CONTAINER ===== */
+.users-table-container {
+    background: #ffffff;
+    border-radius: 10px;
+    padding: 20px 25px;
+    box-shadow: 0px 4px 10px rgba(0,0,0,0.1);
+}
+
+/* ===== HEADER AREA ===== */
+.users-table-header {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    margin-bottom: 15px;
+}
+
+.users-table-header h4 {
+    font-weight: 600;
+    margin: 0;
+    color: #333;
+}
+
+/* ===== HEADER BUTTONS ===== */
+.new-user-btn {
+    background: #355e8b;
+    color: #fff;
+    border: none;
+    padding: 8px 16px;
+    border-radius: 6px;
+    margin-right: 10px;
+    font-size: 14px;
+}
+
+.new-user-btn:hover {
+    background: #2b4c70;
+}
+
+.users-sort-btn {
+    background: #7aa7c7;
+    color: #fff;
+    border: none;
+    padding: 8px 16px;
+    border-radius: 6px;
+    margin-left: 10px;
+    font-size: 14px;
+}
+
+.users-sort-btn:hover {
+    background: #6796b8;
+}
+
+/* ===== SEARCH BOX ===== */
+.users-search-box input {
+    border: 1px solid #ccc;
+    border-radius: 6px;
+    padding: 7px 10px;
+    width: 220px;
+    font-size: 14px;
+}
+
+/* ===== TABLE SCROLL ===== */
+.users-table-responsive {
+    max-height: 460px;
+    overflow-y: auto;
+    margin-top: 10px;
+}
+
+/* ===== TABLE STYLING ===== */
+.users-table {
+    width: 100%;
+    border-collapse: collapse;
+    background: #fff;
+}
+
+.users-table thead {
+    background: #e9ecef;
+    position: sticky;
+    top: 0;
+    z-index: 2;
+}
+
+.users-table th,
+.users-table td {
+    padding: 12px;
+    text-align: left;
+    font-size: 14px;
+    border-bottom: 1px solid #ddd;
+}
+
+.users-table th {
+    font-weight: 600;
+    color: #333;
+}
+
+.users-table tbody tr:hover {
+    background: #f2f7ff;
+}
+
+/* ===== ACTION BUTTONS ===== */
+.users-action-btn {
+    border: none;
+    background: none;
+    margin-right: 6px;
+    padding: 4px;
+}
+
+.users-action-btn img {
+    width: 20px;
+    height: 20px;
+}
+
+.users-edit-btn img {
+    filter: brightness(0) saturate(100%) invert(28%) sepia(77%) saturate(2326%) hue-rotate(190deg) brightness(93%) contrast(96%);
+}
+
+.users-delete-btn img {
+    filter: brightness(0) saturate(100%) invert(16%) sepia(89%) saturate(5335%) hue-rotate(356deg) brightness(90%) contrast(110%);
+}
+
+/* ===== USERS SCROLLBAR ===== */
+.users-table-responsive::-webkit-scrollbar {
+    width: 6px;
+}
+
+.users-table-responsive::-webkit-scrollbar-thumb {
+    background: #bbb;
+    border-radius: 10px;
+}
+
+.users-table-responsive::-webkit-scrollbar-track {
+    background: #f1f1f1;
+}

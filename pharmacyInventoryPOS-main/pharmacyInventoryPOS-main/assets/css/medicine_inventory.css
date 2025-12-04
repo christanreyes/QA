@@ -1,0 +1,127 @@
+@import url('https://fonts.googleapis.com/css2?family=Jost:ital,wght@0,100..900;1,100..900&display=swap');
+@import url('https://fonts.googleapis.com/css2?family=Plus+Jakarta+Sans:ital,wght@0,200..800;1,200..800&display=swap');
+
+/* Main Content Background */
+.main-content {
+    background: #F2F2F2;
+}
+
+/* Medicine Inventory Table Container */
+.inventory-table-container {
+    background: white;
+    border: 1px solid #e0e0e0;
+    border-radius: 8px;
+    padding: 25px;
+    font-family: 'Plus Jakarta Sans', sans-serif;
+    margin-top: 0;
+    display: flex;
+    flex-direction: column;
+    height: calc(100vh - 120px); /* adjust depending on header/sidebar */
+}
+
+.table-responsive {
+    overflow-y: auto;
+    flex-grow: 1; /* table takes remaining space */
+}
+
+/* Table Header & Title */
+.table-header {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    margin-bottom: 20px;
+}
+
+.table-header h4 {
+    font-size: 20px;
+    font-weight: 600;
+    color: #2C3E50;
+    margin: 0;
+    font-family: 'Plus Jakarta Sans', sans-serif;
+}
+
+/* Search Box */
+.search-box {
+    position: relative;
+    width: 300px;
+}
+
+.search-box input {
+    width: 100%;
+    padding: 8px 35px 8px 35px;
+    border: 1px solid #ddd;
+    border-radius: 5px;
+    font-size: 14px;
+    font-family: 'Jost', sans-serif;
+    background-image: url('../images/search_icon.png');
+    background-repeat: no-repeat;
+    background-position: 10px center;
+    background-size: 16px 16px;
+}
+
+.search-box input:focus {
+    outline: none;
+    border-color: #6A9CBA;
+}
+
+.search-icon {
+    display: none;
+}
+
+/* Sort Button */
+.sort-btn {
+    background: #6A9CBA;
+    color: white;
+    border: none;
+    padding: 8px 20px;
+    border-radius: 5px;
+    font-size: 14px;
+    cursor: pointer;
+    margin-left: 10px;
+    display: flex;
+    align-items: center;
+    gap: 5px;
+    font-family: 'Jost', sans-serif;
+    background-image: url('../images/sort_icon.png');
+    background-repeat: no-repeat;
+    background-position: 8px center;
+    background-size: 16px 16px;
+    padding-left: 30px;
+}
+
+.sort-btn span {
+    color: white;
+}
+
+/* Medicine Inventory Table */
+.inventory-table {
+    width: 100%;
+    border: 1px solid #ddd;
+    font-family: 'Jost', sans-serif;
+}
+
+.inventory-table thead th {
+    background: #F8F9FA;
+    color: #495057;
+    font-weight: 600;
+    font-size: 14px;
+    padding: 12px;
+    text-align: left;
+    border-bottom: 2px solid #e0e0e0;
+    font-family: 'Plus Jakarta Sans', sans-serif;
+    position: sticky;
+    top: 0;
+    z-index: 10;
+}
+
+.inventory-table tbody td {
+    padding: 12px;
+    font-size: 14px;
+    color: #495057;
+    border-bottom: 1px solid #f0f0f0;
+    font-family: 'Jost', sans-serif;
+}
+
+.inventory-table tbody tr:hover {
+    background: #F8F9FA;
+}

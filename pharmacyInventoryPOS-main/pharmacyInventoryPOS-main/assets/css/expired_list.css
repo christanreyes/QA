@@ -1,0 +1,176 @@
+@import url('https://fonts.googleapis.com/css2?family=Jost:wght@300;400;500;600&display=swap');
+@import url('https://fonts.googleapis.com/css2?family=Plus+Jakarta+Sans:wght@400;500;600&display=swap');
+
+/* Main area background */
+.main-content {
+    background: #F2F2F2;
+}
+
+/* Main module container (same behavior: fixed height + inner scroll) */
+.sales-table-container {
+    background: #ffffff;
+    border: 1px solid #e0e0e0;
+    border-radius: 8px;
+    padding: 25px;
+    margin-top: 0;
+    display: flex;
+    flex-direction: column;
+    height: calc(100vh - 120px); /* same structure as sample */
+    font-family: 'Plus Jakarta Sans', sans-serif;
+}
+
+/* Scroll area matches sample behavior */
+.table-responsive {
+    flex-grow: 1;
+    overflow-y: auto;
+}
+
+/* Top header layout */
+.table-header {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    margin-bottom: 20px;
+}
+
+.table-header h4 {
+    margin: 0;
+    font-size: 20px;
+    font-weight: 600;
+    color: #2C3E50;
+}
+
+/* New Expired button (mirrors size & style behavior) */
+.new-medicine-btn {
+    background: #6A9CBA;
+    border: none;
+    padding: 8px 27px;
+    border-radius: 5px;
+    font-family: 'Jost', sans-serif;
+    color: #ffffff;
+    font-size: 14px;
+    display: flex;
+    align-items: center;
+    gap: 6px;
+    cursor: pointer;
+     margin-right: 10px;
+}
+
+.new-medicine-btn:hover {
+    background: #5a8aa8;
+}
+
+/* Search field container */
+.search-box {
+    width: 300px;
+    position: relative;
+}
+
+.search-box input {
+    width: 100%;
+    padding: 8px 35px 8px 35px;
+    border: 1px solid #ddd;
+    border-radius: 5px;
+    font-family: 'Jost', sans-serif;
+    font-size: 14px;
+    background-image: url('../images/search_icon.png');
+    background-repeat: no-repeat;
+    background-position: 10px center;
+    background-size: 16px;
+}
+
+.search-box input:focus {
+    border-color: #6A9CBA;
+    outline: none;
+}
+
+/* Sort button – same structure */
+.sort-btn {
+    background: #6A9CBA;
+    border: none;
+    padding: 6px 18px 6px 30px;
+    border-radius: 5px;
+    font-family: 'Jost', sans-serif;
+    color: white;
+    cursor: pointer;
+    margin-left: 10px;
+    background-image: url('../images/sort_icon.png');
+    background-repeat: no-repeat;
+    background-position: 8px center;
+    background-size: 16px;
+}
+
+.sort-btn:hover {
+    background: #5a8aa8;
+}
+
+/* Table structure */
+.sales-table {
+    width: 100%;
+    border: 1px solid #ddd;
+    border-collapse: collapse;
+    font-family: 'Jost', sans-serif;
+}
+
+/* Sticky header behavior */
+.sales-table thead th {
+    background: #F8F9FA;
+    padding: 12px;
+    font-size: 14px;
+    font-weight: 600;
+    color: #495057;
+    border-bottom: 2px solid #e0e0e0;
+    position: sticky;
+    top: 0;
+    z-index: 10;
+}
+
+/* Table rows */
+.sales-table tbody td {
+    padding: 12px;
+    font-size: 14px;
+    color: #495057;
+    border-bottom: 1px solid #f0f0f0;
+}
+
+.sales-table tbody tr:hover {
+    background: #F8F9FA;
+}
+
+/* Product info lines mimic structure */
+.product-sku {
+    font-size: 13px;
+    color: #7F8C8D;
+}
+
+.product-name {
+    font-size: 14px;
+    font-weight: 600;
+    color: #2C3E50;
+}
+
+/* Action buttons */
+.action-btn {
+    background: none;
+    border: none;
+    cursor: pointer;
+    padding: 4px 8px;
+    transition: 0.2s ease;
+}
+
+.action-btn:hover {
+    transform: scale(1.1);
+}
+
+.action-btn img {
+    width: 20px;
+    height: 20px;
+}
+
+.edit-btn img {
+    filter: brightness(0) saturate(100%) invert(56%) sepia(24%) saturate(464%) hue-rotate(168deg) brightness(94%) contrast(93%);
+}
+
+.delete-btn img {
+    filter: brightness(0) saturate(100%) invert(45%) sepia(95%) saturate(4823%) hue-rotate(338deg) brightness(96%) contrast(93%);
+}
