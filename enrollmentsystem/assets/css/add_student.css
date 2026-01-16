@@ -1,0 +1,137 @@
+@import url('header.css');
+
+body {
+    margin: 0;
+    font-family: Arial, sans-serif;
+    background: #f0f0f0;
+}
+
+/* SIDEBAR: styles are centralized in assets/css/sidebar.css (loaded via sidebar.php) */
+
+/* MAIN */
+.main {
+    margin-left: 200px;
+    padding: 20px;
+    background: #ffffff;
+}
+
+/* HEADER */
+.header {
+    background: #bfbfbf;
+    padding: 28px 25px;
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+}
+
+/* FORM */
+.form-box {
+    background: #cfcfcf;
+    margin: 20px;
+    padding: 15px;
+    border: 2px solid #8b6cff;
+    min-height: 60vh;
+}
+
+.row {
+    display: flex;
+    gap: 15px;
+    margin-bottom: 15px;
+}
+
+.field {
+    flex: 1;
+}
+
+.field.small {
+    width: 200px;
+}
+
+.field.full {
+    width: 100%;
+}
+
+label {
+    display: block;
+    font-size: 13px;
+    margin-bottom: 5px;
+}
+
+input, select {
+    width: 100%;
+    padding: 6px;
+    border: none;
+}
+
+.check-row label {
+    display: inline-block;
+    margin-right: 15px;
+}
+
+/* STUDENT ID */
+.id-box {
+    display: flex;
+    align-items: center;
+}
+
+.id-box input {
+    flex: 1;
+}
+
+.check {
+    margin-left: 8px;
+    background: white;
+    padding: 3px 6px;
+    border-radius: 50%;
+}
+
+/* BOTTOM GRID */
+.bottom-grid {
+    display: grid;
+    grid-template-columns: repeat(4, 1fr);
+    gap: 20px;
+    margin-top: 20px;
+}
+
+.box {
+    background: transparent;
+}
+
+.box h4 {
+    margin-bottom: 8px;
+}
+
+.box label {
+    display: block;
+    font-size: 13px;
+    margin-bottom: 5px;
+}
+
+.total-container {
+    position: absolute;
+    bottom: 30px;
+    right: 40px;
+    background: white;
+    padding: 10px 15px;
+    border-radius: 4px;
+    text-align: right;
+}
+
+.total-container input {
+    font-size: 18px;
+    font-weight: bold;
+    text-align: right;
+    border: none;
+    width: 140px;
+}
+
+.save-btn {
+    position: absolute;
+    bottom: 30px;
+    left: 260px;
+    padding: 10px 20px;
+    background: #0d8fdc;
+    color: white;
+    border: none;
+    cursor: pointer;
+}

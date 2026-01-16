@@ -1,0 +1,67 @@
+/* Header common styles */
+.header{
+    background:#bfbfbf;
+    padding:14px 24px;
+    display:flex;
+    align-items:center;
+    justify-content:space-between;
+    box-sizing:border-box;
+}
+.header .title{
+    font-weight:700;
+    font-size:18px;
+    color:#111;
+}
+.header .search-box{
+    display:flex;
+    align-items:center;
+    gap:8px;
+    background:#e9e9e9;
+    padding:6px 8px;
+    border-radius:22px;
+    border:1px solid #cfcfcf;
+    box-shadow:0 1px 0 rgba(0,0,0,0.03) inset;
+}
+
+/* push search to the right when used in header */
+.header .search-box { margin-left: auto; }
+
+/* Right-side header area (datetime, small controls) */
+.header .header-right,
+.header-right {
+    color: #111;
+    font-size: 14px;
+}
+.header .datetime, .header-right #datetime {
+    font-weight:600;
+}
+.header .search-box input[type="text"]{
+    padding:8px 12px;
+    border-radius:18px;
+    border: none;
+    outline:none;
+    min-width:180px;
+    background:transparent;
+}
+.header .search-box button{
+    margin-left:6px;
+    padding:8px 10px;
+    border-radius:10px;
+    background:#fff;
+    border:1px solid #bbb;
+    cursor:pointer;
+    display:flex;
+    align-items:center;
+    justify-content:center;
+}
+.header .search-box .icon{
+    width:18px;
+    height:18px;
+    display:inline-block;
+    background-size:contain;
+}
+@media (max-width:700px){
+    .header{ padding:10px }
+    .header .title{ font-size:16px }
+    .header .search-box input[type="text"]{ min-width:120px }
+}

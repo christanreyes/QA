@@ -1,0 +1,116 @@
+@import url('header.css');
+
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+    font-family: Arial, sans-serif;
+}
+
+/* LAYOUT */
+.layout {
+    display: flex;
+    min-height: 100vh;
+}
+
+/* SIDEBAR styles are centralized in assets/css/sidebar.css */
+
+/* MAIN */
+.main {
+    flex: 1;
+    background: #ffffff;
+    padding: 20px;
+}
+
+/* CONTENT BOX */
+.content-box {
+    background: #d3cfcf;
+    border: 2px solid #8b6cff;
+    padding: 15px;
+    min-height: 50vh;
+    margin-left: 200px;
+}
+
+/* TOP BAR */
+.top-bar {
+    display: flex;
+    justify-content: flex-end;
+    align-items: center;
+    gap: 15px;
+    margin-bottom: 15px;
+}
+
+.top-bar span {
+    font-weight: bold;
+    color: #ffffff;
+}
+
+/* SEARCH: controlled by assets/css/header.css */
+
+/* TABLE */
+.student-table {
+    width: 100%;
+    border-collapse: collapse;
+}
+
+.student-table th {
+    background: #bfbaba;
+    color: #ffffff;
+    padding: 10px;
+    border: 3px solid white;
+    text-align: center;
+}
+
+.student-table td {
+    background: #d3cfcf;
+    padding: 10px;
+    border: 3px solid white;
+    text-align: center;
+    font-size: 13px;
+}
+
+/* SIDEBAR styles are centralized in assets/css/sidebar.css */
+
+/* MAIN */
+.main {
+    margin-left: 200px;
+}
+
+/* HEADER: controlled by assets/css/header.css */
+
+/* SEARCH BOX: controlled by assets/css/header.css */
+
+/* TABLE CONTAINER */
+.table-box {
+    background: #cfcfcf;
+    margin: 20px;
+    padding: 15px;
+    border: 2px solid #8b6cff;
+    min-height: 75vh;
+    overflow-x: auto;
+}
+
+/* TABLE */
+.student-table {
+    width: 100%;
+    border-collapse: collapse;
+}
+
+/* TABLE HEADERS */
+.student-table th {
+    background: #bfbaba;
+    color: white;
+    padding: 10px;
+    border: 3px solid white;
+    font-size: 14px;
+    text-align: center;
+}
+
+/* TABLE CELLS */
+.student-table td {
+    background: #cfcfcf;
+    padding: 10px;
+    border: 3px solid white;
+    font-size: 13px;
+    text-align: center;
+}

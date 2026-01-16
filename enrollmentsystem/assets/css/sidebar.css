@@ -1,0 +1,61 @@
+/* Sidebar base styles - keep layout consistent across pages */
+html body .sidebar {
+    position:fixed !important;
+    left:0 !important;
+    top:0 !important;
+    width:200px !important;
+    height:100vh !important;
+    background:#0d8fdc !important;
+    color:#fff !important;
+    box-sizing:border-box !important;
+    padding-top:18px !important;
+    display:flex !important;
+    flex-direction:column !important;
+    align-items:center !important;
+    z-index:9999;
+}
+
+.sidebar .logo {
+    width:100% !important;
+    text-align:center !important;
+    padding-bottom:12px !important;
+    box-sizing:border-box !important;
+}
+
+.sidebar .logo img{
+    width:72px !important;
+    height:auto !important;
+    display:block !important;
+    margin:0 auto !important;
+}
+
+.sidebar nav{
+    width:100% !important;
+}
+
+.sidebar nav a{
+    display:block !important;
+    padding:14px 20px !important;
+    color:#fff !important;
+    text-decoration:none !important;
+    font-size:15px !important;
+    box-sizing:border-box !important;
+}
+
+.sidebar nav a.active{
+    background:#5db6e6 !important;
+}
+
+.sidebar nav a:hover{
+    background:#1aa3e8 !important;
+}
+
+/* Ensure main content always shifts right */
+.main { margin-left:200px !important; }
+
+/* Small screens: keep sidebar usable */
+@media (max-width:600px){
+    .sidebar{ width:72px !important }
+    .sidebar nav a{ padding:12px 8px !important; font-size:12px !important }
+    .main{ margin-left:72px !important }
+}
